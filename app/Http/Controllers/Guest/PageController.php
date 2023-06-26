@@ -8,8 +8,13 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
+
     public function index() {
+        return view("homepage");
+    }
+
+    public function movies() {
         $collMovies = Movie::all();
-        return view("homepage", compact("collMovies"));
+        return view("movies", compact("collMovies"));
     }
 }
